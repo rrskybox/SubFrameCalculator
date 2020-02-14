@@ -15,26 +15,33 @@ Subframe Analyzer is a Windows Forms executable, written in Visual Basic.  The a
 
 Installation:  
 
-Download the SubframeAnalyzer_Exe.zip and open.  Run the Setup application.  Upon completion, an application icon will have been added to the start menu under the category TSXToolkit with the name 
-Subframe Analyzer.  This application can be pinned to the Start if desired.
+Run the Setup application (One Click).  Upon completion, an application icon will have been added to the start menu under the category TSXToolkit with the name Subframe Analyzer.  This application can be pinned to the Start if desired.
 
 Operation:  
 
 The algorithms are based on work by ... 
 
-John Smith: http://www.hiddenloft.com/notes/SubExposures.pdf
-Charles Anstey: http://www.cloudynights.com/item.php?item_id=1622
-Steve Cannistra: http://www.starrywonders.com/snr.html
+ John Smith: http://www.hiddenloft.com/notes/SubExposures.pdf
+
+ Charles Anstey: http://www.cloudynights.com/item.php?item_id=1622
+
+ Steve Cannistra: http://www.starrywonders.com/snr.html
 
 The algorithms require the following imaging parameters, most of which are currently supplied by TSX.  For details, see the above articles.
 
-Gain:  electrons per ADU for the CCD
-Readout Noise:  read out noise in electrons
-Maximum Noise Factor:  Maximum tolerable contribution of readout noise
-Exposure Reduction:  Exposure reduction factor
-SLambda:  Faint target ADU minimum
-SNR Target: Fraction of maximum achievable signal to noise ratio (Cannistra)
-Pedestal:  base pedestal
+ Gain:  electrons per ADU for the CCD
+
+ Readout Noise:  read out noise in electrons
+
+ Maximum Noise Factor:  Maximum tolerable contribution of readout noise
+
+ Exposure Reduction:  Exposure reduction factor
+
+ SLambda:  Faint target ADU minimum
+
+ SNR Target: Fraction of maximum achievable signal to noise ratio (Cannistra)
+
+ Pedestal:  base pedestal
 
 Simple sub-exposure strategies concentrate exclusively on optimization against random internal noise sources.  Such calculations utilize fixed parameters from ones CCD specification like read noise, dark current, etc.  However, they  fail to compensate for the environmental non-random sources of noise such as light pollution, sky glow, turbulence which vary from night to night and location to location.  These critical factors can only be accurately derived from an appropriate reference image.  Three authors have developed optimal sub-frame exposure algorithms that account for noise contribution from both internal (equipment) sources and external (atmospheric) sources.  
  
